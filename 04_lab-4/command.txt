@@ -1,0 +1,16 @@
+puppet resource -h
+puppet resource --type
+puppet describe package
+puppet resource -h
+puppet resource package nginx
+puppet apply -e "package { 'nginx': ensure => 'installed', }"
+systemctl status nginx
+puppet resource --type
+puppet resource service nginx
+puppet apply -e "service { 'nginx': ensure => 'started', enable => 'true',}"
+puppet apply -e "service { 'nginx': ensure => 'running', enable => 'true',}"
+puppet resource service nginx
+curl localhost
+ip a
+puppet resource file /usr/share/nginx/html/index.html
+puppet apply -e "file { '/usr/share/nginx/html/index.html': content => 'Welcome Dirane To puppet Server',}"
