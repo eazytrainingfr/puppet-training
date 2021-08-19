@@ -1,6 +1,6 @@
 class { 'puppetboard':
   python_version  => '3.6',
-  enable_catalog  => true,
+  enable_catalog  => false,
 }
 
 python::pip { 'flask':
