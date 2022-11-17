@@ -2,7 +2,7 @@
 yum -y install update
 yum -y  update
 yum install -y https://yum.puppet.com/puppet-release-el-8.noarch.rpm
-yum install -y puppetserver
+yum install -y puppetserver-7.2.1-1.el8.noarch
 echo "127.0.1.1 puppet" >> /etc/hosts
 # si nécessaire sed -i 's/2g/1g/g' /etc/sysconfig/puppetserver
 systemctl enable --now puppetserver puppet
